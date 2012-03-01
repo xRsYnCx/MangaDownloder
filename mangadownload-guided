@@ -1,0 +1,15 @@
+#!/bin/sh
+#-----------------------
+# Written by Zane Conley
+
+echo "Hello, "$USER". This script will download all of your manga 
+automagically!"
+
+echo "Enter the name of the manga you want: "
+read name
+echo "Enter your wanted chapter(ex. 001): "
+read chapter
+echo "Enter the pages in that chapter: "
+read pages
+
+mangadownload $name $chapter $pages

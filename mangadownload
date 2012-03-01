@@ -1,0 +1,40 @@
+#!/bin/bash
+#-----------------------
+# Written by Zane Conley
+
+mkdir -p $HOME/Documents/Manga/$1/$2
+cd $HOME/Documents/Manga/$1/$2/
+
+#if((i>100)); then
+	#for((c=0; c<=1; c++))
+	#do
+		#for((i=1; i<=$3; i++))
+		#do
+			#if((i<10)); then
+				#eval wget -cq http://dl01.mangashare.com/manga/$1/$2/$c\0$i.jpg && (echo "Got page $1/$2/$i" || echo "Failed to get page $1/$2/$i")
+			#else
+				#eval wget -cq http://dl01.mangashare.com/manga/$1/$2/$c$i.jpg && (echo "Got page $1/$2/$i" || echo "Failed to get page $1/$2/$i")
+			#fi
+		#done
+	#done
+#else
+	#for((i=1; i<=$3; i++))
+	#do
+		#if((i<10)); then
+			#eval wget -cq http://dl01.mangashare.com/manga/$1/$2/\0\0$i.jpg && (echo "Got page $1/$2/$i" || echo "Failed to get page $1/$2/$i")
+		#else
+			#eval wget -cq http://dl01.mangashare.com/manga/$1/$2/\0$i.jpg && (echo "Got page $1/$2/$i" || echo "Failed to get page $1/$2/$i")
+		#fi
+	#done
+#fi
+
+for i in $(eval echo {001..$3})
+do
+	eval wget -cq http://dl01.mangashare.com/manga/$1/$2/$i.jpg && (echo "Got page $1/$2/$i" || echo "Failed to get page $1/$2/$i")
+done
+
+cd ../
+zip -r $1_$2.zip $2 > /dev/null
+rm -r $2
+
+echo "Chapter $2 complete"
