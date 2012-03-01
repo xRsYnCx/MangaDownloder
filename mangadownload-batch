@@ -4,5 +4,5 @@
 
 for i in $(eval echo {$2..$3})
 do
-	mangadownload $1 $i 100
+	mangadownload $1 $i $4
 done
