@@ -4,7 +4,7 @@ How to use:
 mangadownload
 	mangadownload <Title> <volume> <pages>
 mangadownload-batch
-	mangadownload-batch <Title> <BeginVolume> <EndVolume>
+	mangadownload-batch <Title> <BeginVolume> <EndVolume> <pages>
 mangadownload-guided
 	mangadownload-guided
 	<follow prompts>
