@@ -1,0 +1,16 @@
+Manga Downloader
+----------------
+How to use:
+mangadownload
+	mangadownload <Title> <volume> <pages>
+mangadownload-batch
+	mangadownload-batch <Title> <BeginVolume> <EndVolume>
+mangadownload-guided
+	mangadownload-guided
+	<follow prompts>
+
+NOTE*
+pages are in 00X format
+	starts with page 001
+		ex: page 75: 075
+		ex: page 120: 120
